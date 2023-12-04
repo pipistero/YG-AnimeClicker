@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2800841281292018719}
   - component: {fileID: 2800841281292018718}
+  - component: {fileID: 4635546398996762647}
   m_Layer: 0
   m_Name: MainSceneBootstrap
   m_TagString: Untagged
@@ -42,5 +43,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7866e48bf384793b64e1d1127a6a9f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4635546398996762647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2800841281292018721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556793aa8f4a44ff8385a60d34f3090d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

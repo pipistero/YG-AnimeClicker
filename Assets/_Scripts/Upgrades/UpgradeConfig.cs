@@ -9,7 +9,8 @@ namespace _Scripts.Upgrades
     {
         [Header("Type")] 
         [SerializeField] private UpgradeType _upgradeType;
-        [SerializeField] private UpgradeClass _upgradeClass;
+        [SerializeField] private PerSecondUpgradeType _perSecondUpgradeType;
+        [SerializeField] private PerClickUpgradeType _perClickUpgradeType;
 
         [Header("Icon")] 
         [SerializeField] private Sprite _icon;
@@ -25,7 +26,8 @@ namespace _Scripts.Upgrades
         [SerializeField] private long _price;
 
         public UpgradeType UpgradeType => _upgradeType;
-        public UpgradeClass UpgradeClass => _upgradeClass;
+        public PerSecondUpgradeType PerSecondUpgradeType => _perSecondUpgradeType;
+        public PerClickUpgradeType PerClickUpgradeType => _perClickUpgradeType;
 
         public Sprite Icon => _icon;
 

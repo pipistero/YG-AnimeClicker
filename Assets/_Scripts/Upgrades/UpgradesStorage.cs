@@ -6,8 +6,8 @@ namespace _Scripts.Upgrades
 {
     public class UpgradesStorage
     {
-        private readonly Dictionary<UpgradeClass, UpgradeConfig> _perSecondUpgradesMap;
-        private readonly Dictionary<UpgradeClass, UpgradeConfig> _perClickUpgradesMap;
+        private readonly Dictionary<PerSecondUpgradeType, UpgradeConfig> _perSecondUpgradesMap;
+        private readonly Dictionary<PerClickUpgradeType, UpgradeConfig> _perClickUpgradesMap;
 
         private readonly List<UpgradeConfig> _perSecondUpgrades;
         private readonly List<UpgradeConfig> _perClickUpgrades;
@@ -17,8 +17,8 @@ namespace _Scripts.Upgrades
             _perSecondUpgrades = perSecondUpgrades.ToList();
             _perClickUpgrades = perClickUpgrades.ToList();
             
-            _perSecondUpgradesMap = _perSecondUpgrades.ToDictionary(u => u.UpgradeClass);
-            _perClickUpgradesMap = _perClickUpgrades.ToDictionary(u => u.UpgradeClass);
+            _perSecondUpgradesMap = _perSecondUpgrades.ToDictionary(u => u.PerSecondUpgradeType);
+            _perClickUpgradesMap = _perClickUpgrades.ToDictionary(u => u.PerClickUpgradeType);
         }
 
         public List<UpgradeConfig> GetPerSecondUpgrades()
@@ -31,12 +31,12 @@ namespace _Scripts.Upgrades
             return _perClickUpgrades;
         }
 
-        public UpgradeConfig GetPerSecondUpgrade(UpgradeClass upgradeClass)
+        public UpgradeConfig GetPerSecondUpgrade(PerSecondUpgradeType upgradeClass)
         {
             return _perSecondUpgradesMap[upgradeClass];
         }
         
-        public UpgradeConfig GetPerClickUpgrade(UpgradeClass upgradeClass)
+        public UpgradeConfig GetPerClickUpgrade(PerClickUpgradeType upgradeClass)
         {
             return _perClickUpgradesMap[upgradeClass];
         }

@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7d034857-f758-4716-b7ad-a38e9a790f20" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.YG-AnimeClicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.YG-AnimeClicker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/SceneBootstraps/MainSceneBootstrap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/SceneBootstraps/MainSceneBootstrap.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/SceneContexts/MainSceneContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/SceneContexts/MainSceneContext.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Upgrades/UpgradeConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Upgrades/UpgradeConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Upgrades/UpgradesStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Upgrades/UpgradesStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/_Enums/Upgrades/UpgradeClass.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/_Enums/Upgrades/UpgradeClass.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701714119519</updated>
-      <workItem from="1701714121913" duration="1718000" />
+      <workItem from="1701714121913" duration="4082000" />
     </task>
     <servers />
   </component>
