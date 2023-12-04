@@ -10,9 +10,12 @@ namespace _Scripts.Clicker
     public class ClickerData
     {
         public event Action<BigInteger> PerSecondValueUpdated; 
-        public event Action<BigInteger> PerClickValueUpdated; 
+        public event Action<BigInteger> PerClickValueUpdated;
+
+        public event Action<int> LevelUpdated; 
 
         private int _level;
+        public int Level => _level;
 
         private Dictionary<PerSecondUpgradeType, int> _perSecondUpgradesMap;
         private Dictionary<PerClickUpgradeType, int> _perClickUpgradesMap;
