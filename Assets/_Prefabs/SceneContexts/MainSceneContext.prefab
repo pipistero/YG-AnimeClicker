@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4980409714655622021}
   - component: {fileID: 4980409714655622026}
   - component: {fileID: 4980409714655622025}
+  - component: {fileID: 1222981630538297758}
   m_Layer: 0
   m_Name: MainSceneContext
   m_TagString: Untagged
@@ -51,6 +52,8 @@ MonoBehaviour:
   _monoInstallers:
   - {fileID: 4980409714655622021}
   - {fileID: 4980409714655622026}
+  - {fileID: 4980409714655622025}
+  - {fileID: 1222981630538297758}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -107,3 +110,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _soundsFactory: {fileID: 0}
   _audioClipsData: []
+--- !u!114 &1222981630538297758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4980409714655622022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60fa5274f89045cf92bf5deadfad8db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _perSecondUpgrades: []
+  _perClickUpgrades: []
