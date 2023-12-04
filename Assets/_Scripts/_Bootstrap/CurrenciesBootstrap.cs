@@ -8,24 +8,20 @@ namespace _Scripts._Bootstrap
 {
     public class CurrenciesBootstrap : MonoBehaviour
     {
-        private ResourcesController<CurrencyType> _resourcesController;
-
         [Inject]
         private void Construct(ResourcesController<CurrencyType> resourcesController)
         {
-            _resourcesController = resourcesController;
-            
-            InitializeResourcesController();
+            InitializeResourcesController(resourcesController);
         }
 
-        private void InitializeResourcesController()
+        private void InitializeResourcesController(ResourcesController<CurrencyType> resourcesController)
         {
             ResourceInteger<CurrencyType>[] integerResources = new[]
             {
                 new ResourceInteger<CurrencyType>(CurrencyType.Gold, 0)
             };
             
-            _resourcesController.InitializeResources(integerResources);
+            resourcesController.InitializeResources(integerResources);
         }
     }
 }
