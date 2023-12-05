@@ -3,6 +3,7 @@ using System.Numerics;
 using _Enums.Currencies;
 using _Scripts.Currencies;
 using PS.ResourcesFeature.Controller;
+using PS.TimerFeature.TimeInvoker;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -49,6 +50,11 @@ namespace _Scripts.Clicker
             //Animation etc.
             _resourcesController.AddAmount(CurrencyType.Gold, _perClickValue, this);            
         }
+
+        private void OnSecondTicked()
+        {
+            _resourcesController.AddAmount(CurrencyType.Gold, _perSecondValue, this);
+        }
         
         #region Events
 
@@ -58,6 +64,8 @@ namespace _Scripts.Clicker
             
             _clickerData.PerSecondValueUpdated += OnPerSecondValueUpdated;
             _clickerData.PerClickValueUpdated += OnPerClickValueUpdated;
+
+            TimeInvoker.Instance.SecondTickedUnscaled += OnSecondTicked;
         }
 
         private void OnDisable()
@@ -66,6 +74,8 @@ namespace _Scripts.Clicker
 
             _clickerData.PerSecondValueUpdated -= OnPerSecondValueUpdated;
             _clickerData.PerClickValueUpdated -= OnPerClickValueUpdated;
+            
+            TimeInvoker.Instance.SecondTickedUnscaled -= OnSecondTicked;
         }
 
         #endregion

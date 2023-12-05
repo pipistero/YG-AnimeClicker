@@ -28,16 +28,6 @@ namespace _Scripts.Currencies
             _resourcesController = resourcesController;
         }
 
-        private void OnEnable()
-        {
-            SubscribeEvents();
-        }
-
-        private void SubscribeEvents()
-        {
-            _resourcesController.ResourceBigIntegerUpdated += OnResourceUpdated;
-        }
-
         private void OnResourceUpdated(CurrencyType type, BigInteger oldValue, BigInteger newValue, object sender)
         {
             UpdateView(oldValue, newValue);
@@ -47,5 +37,19 @@ namespace _Scripts.Currencies
         {
             _value.text = newValue.ToString();
         }
+
+        #region Events work
+
+        private void OnEnable()
+        {
+            _resourcesController.ResourceBigIntegerUpdated += OnResourceUpdated;
+        }
+
+        private void OnDisable()
+        {
+            _resourcesController.ResourceBigIntegerUpdated -= OnResourceUpdated;
+        }
+
+        #endregion
     }
 }

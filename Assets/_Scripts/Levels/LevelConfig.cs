@@ -1,4 +1,6 @@
+using _Scripts._Enums.Upgrades;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Scripts.Levels
 {
@@ -13,11 +15,16 @@ namespace _Scripts.Levels
 
         [Header("Texts")] 
         [SerializeField] private string _name;
-
+        
+        [Header("Conditions")] 
+        [SerializeField] private LevelCondition _condition;
+        
         public int Level => _level;
 
         public string Background => _background;
 
         public string Name => _name;
+
+        public LevelCondition Condition => _condition;
     }
 }
