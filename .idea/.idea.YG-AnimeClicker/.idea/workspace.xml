@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d034857-f758-4716-b7ad-a38e9a790f20" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.YG-AnimeClicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.YG-AnimeClicker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Clicker/ClickerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Clicker/ClickerView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Currencies/CurrencyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Currencies/CurrencyView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Levels/LevelConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Levels/LevelConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Configs/Levels/Level 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Configs/Levels/Level 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Project.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Project.asmdef" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,7 @@
       <updated>1701714119519</updated>
       <workItem from="1701714121913" duration="4603000" />
       <workItem from="1701759311097" duration="1544000" />
-      <workItem from="1701775663291" duration="502000" />
+      <workItem from="1701775663291" duration="837000" />
     </task>
     <servers />
   </component>

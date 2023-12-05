@@ -44,6 +44,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdb9ff358194c27a02fb559c2b2d529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1817191959462728619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1968992954194344744}
+  - component: {fileID: 2360413977448248451}
+  m_Layer: 0
+  m_Name: LocalizationControllerInstaller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1968992954194344744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817191959462728619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4980409714655622027}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2360413977448248451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817191959462728619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c73aaff62d2435bbc738a2b95ca045a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _languageAssets: []
 --- !u!1 &2212596622728591569
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,6 +216,7 @@ Transform:
   - {fileID: 5922614655583016869}
   - {fileID: 6787477656879517976}
   - {fileID: 5349085621199092722}
+  - {fileID: 1968992954194344744}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -195,6 +241,7 @@ MonoBehaviour:
   - {fileID: 4146315190271613591}
   - {fileID: 2208869772945398269}
   - {fileID: 4540441832047352238}
+  - {fileID: 2360413977448248451}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:

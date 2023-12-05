@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Level 1
   m_EditorClassIdentifier: 
   _level: 1
-  _background: {fileID: 0}
+  _background: 
   _name: Clearing in the woods
+  _condition:
+    UpgradeType: 1
+    Value: 2
