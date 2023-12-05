@@ -8,7 +8,8 @@ namespace _Installers
 {
     public class SpritesControllerInstaller : MonoInstaller
     {
-        [SerializeField] private Sprite[] _images;
+        [SerializeField] private Sprite[] _currencies;
+        [SerializeField] private Sprite[] _backgrounds;
         
         public override void InstallBindings()
         {
@@ -22,7 +23,8 @@ namespace _Installers
         {
             var result = new List<Sprite>();
 
-            result.AddRange(_images);
+            result.AddRange(_currencies);
+            result.AddRange(_backgrounds);
             
             return result;
         }

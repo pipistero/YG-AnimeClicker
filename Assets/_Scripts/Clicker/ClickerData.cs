@@ -27,8 +27,11 @@ namespace _Scripts.Clicker
         private readonly LevelStorage _levelStorage;
 
         private BigInteger _perSecondValue;
+        public BigInteger PerSecondValue => _perSecondValue;
+        
         private BigInteger _perClickValue;
-
+        public BigInteger PerClickValue => _perClickValue;
+        
         public void SetLevel(int level)
         {
             _level = level;

@@ -16,9 +16,9 @@ namespace _Scripts._Bootstrap
 
         private void InitializeResourcesController(ResourcesController<CurrencyType> resourcesController)
         {
-            ResourceInteger<CurrencyType>[] integerResources = new[]
+            ResourceBigInteger<CurrencyType>[] integerResources = new[]
             {
-                new ResourceInteger<CurrencyType>(CurrencyType.Gold, 0)
+                new ResourceBigInteger<CurrencyType>(CurrencyType.Gold, 0)
             };
             
             resourcesController.InitializeResources(integerResources);

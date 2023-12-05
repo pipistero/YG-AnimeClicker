@@ -6,13 +6,13 @@ namespace _Scripts.Upgrades
 {
     public class UpgradesStorage
     {
-        private readonly Dictionary<PerSecondUpgradeType, UpgradeConfig> _perSecondUpgradesMap;
-        private readonly Dictionary<PerClickUpgradeType, UpgradeConfig> _perClickUpgradesMap;
+        private readonly Dictionary<PerSecondUpgradeType, PerSecondUpgradeConfig> _perSecondUpgradesMap;
+        private readonly Dictionary<PerClickUpgradeType, PerClickUpgradeConfig> _perClickUpgradesMap;
 
-        private readonly List<UpgradeConfig> _perSecondUpgrades;
-        private readonly List<UpgradeConfig> _perClickUpgrades;
+        private readonly List<PerSecondUpgradeConfig> _perSecondUpgrades;
+        private readonly List<PerClickUpgradeConfig> _perClickUpgrades;
 
-        public UpgradesStorage(IEnumerable<UpgradeConfig> perSecondUpgrades, IEnumerable<UpgradeConfig> perClickUpgrades)
+        public UpgradesStorage(IEnumerable<PerSecondUpgradeConfig> perSecondUpgrades, IEnumerable<PerClickUpgradeConfig> perClickUpgrades)
         {
             _perSecondUpgrades = perSecondUpgrades.ToList();
             _perClickUpgrades = perClickUpgrades.ToList();
@@ -21,22 +21,22 @@ namespace _Scripts.Upgrades
             _perClickUpgradesMap = _perClickUpgrades.ToDictionary(u => u.PerClickUpgradeType);
         }
 
-        public List<UpgradeConfig> GetPerSecondUpgrades()
+        public List<PerSecondUpgradeConfig> GetPerSecondUpgrades()
         {
             return _perSecondUpgrades;
         }
 
-        public List<UpgradeConfig> GetPerClickUpgrades()
+        public List<PerClickUpgradeConfig> GetPerClickUpgrades()
         {
             return _perClickUpgrades;
         }
 
-        public UpgradeConfig GetPerSecondUpgrade(PerSecondUpgradeType upgradeClass)
+        public PerSecondUpgradeConfig GetPerSecondUpgrade(PerSecondUpgradeType upgradeClass)
         {
             return _perSecondUpgradesMap[upgradeClass];
         }
         
-        public UpgradeConfig GetPerClickUpgrade(PerClickUpgradeType upgradeClass)
+        public PerClickUpgradeConfig GetPerClickUpgrade(PerClickUpgradeType upgradeClass)
         {
             return _perClickUpgradesMap[upgradeClass];
         }

@@ -135,8 +135,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60fa5274f89045cf92bf5deadfad8db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _perSecondUpgrades: []
-  _perClickUpgrades: []
+  _perSecondUpgrades:
+  - {fileID: 11400000, guid: 064b2bc5f3a65b14ba2d494652d75660, type: 2}
+  _perClickUpgrades:
+  - {fileID: 11400000, guid: c9211aed0122b244a912abfda55a1f7e, type: 2}
 --- !u!1 &2725825299327074602
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +398,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0af6f751668c4ffaa3093d8b9c97e39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _images: []
+  _currencies:
+  - {fileID: 21300000, guid: 903aafca1c6afcf4e9c8dbb1c96be364, type: 3}
+  _backgrounds: []
 --- !u!1 &8877249230953681249
 GameObject:
   m_ObjectHideFlags: 0

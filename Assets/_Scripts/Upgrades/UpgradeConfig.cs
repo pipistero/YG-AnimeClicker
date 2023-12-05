@@ -4,14 +4,8 @@ using UnityEngine;
 
 namespace _Scripts.Upgrades
 {
-    [CreateAssetMenu(menuName = "Upgrades/New upgrade", fileName = "New Upgrade Config")]
-    public class UpgradeConfig : ScriptableObject
+    public abstract class UpgradeConfig : ScriptableObject
     {
-        [Header("Type")] 
-        [SerializeField] private UpgradeType _upgradeType;
-        [SerializeField] private PerSecondUpgradeType _perSecondUpgradeType;
-        [SerializeField] private PerClickUpgradeType _perClickUpgradeType;
-
         [Header("Icon")] 
         [SerializeField] private string _icon;
 
@@ -25,9 +19,7 @@ namespace _Scripts.Upgrades
         [Header("Price")] 
         [SerializeField] private long _price;
 
-        public UpgradeType UpgradeType => _upgradeType;
-        public PerSecondUpgradeType PerSecondUpgradeType => _perSecondUpgradeType;
-        public PerClickUpgradeType PerClickUpgradeType => _perClickUpgradeType;
+        public abstract UpgradeType UpgradeType { get; }
 
         public string Icon => _icon;
 

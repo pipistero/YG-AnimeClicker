@@ -16,12 +16,6 @@ namespace _Scripts.Clicker
         [Header("Buttons")] 
         [SerializeField] private Button _button;
 
-        [Header("Texts")] 
-        [SerializeField] private TextMeshProUGUI _level;
-        
-        [Header("Currency")] 
-        [SerializeField] private CurrencyView _currencyView;
-
         private BigInteger _perClickValue;
         private BigInteger _perSecondValue;
 
@@ -37,12 +31,15 @@ namespace _Scripts.Clicker
 
         private void Start()
         {
+            _perClickValue = _clickerData.PerClickValue;
+            _perSecondValue = _clickerData.PerSecondValue;
+            
             UpdateView();
         }
 
         public void UpdateView()
         {
-            _level.text = $"Level {_clickerData.Level}";
+            
         }
         
         private void OnButtonClick()

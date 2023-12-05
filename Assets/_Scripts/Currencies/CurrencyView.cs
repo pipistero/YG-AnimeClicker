@@ -2,6 +2,7 @@ using System;
 using System.Numerics;
 using _Enums.Currencies;
 using PS.ResourcesFeature.Controller;
+using PS.SpritesFeature.Controller;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,19 +22,31 @@ namespace _Scripts.Currencies
         [SerializeField] private Image _icon;
 
         private ResourcesController<CurrencyType> _resourcesController;
+        private SpritesStorage _spritesStorage;
 
         [Inject]
-        public void Construct(ResourcesController<CurrencyType> resourcesController)
+        public void Construct(ResourcesController<CurrencyType> resourcesController, SpritesStorage spritesStorage)
         {
             _resourcesController = resourcesController;
+            _spritesStorage = spritesStorage;
+        }
+
+        private void Start()
+        {
+            _icon.sprite = _spritesStorage.GetSprite(_type.ToString());
+            
+            UpdateValue(BigInteger.Zero, _resourcesController.GetBigIntegerAmount(_type));
         }
 
         private void OnResourceUpdated(CurrencyType type, BigInteger oldValue, BigInteger newValue, object sender)
         {
-            UpdateView(oldValue, newValue);
+            if (_type != type)
+                return;
+            
+            UpdateValue(oldValue, newValue);
         }
 
-        private void UpdateView(BigInteger oldValue, BigInteger newValue)
+        private void UpdateValue(BigInteger oldValue, BigInteger newValue)
         {
             _value.text = newValue.ToString();
         }
