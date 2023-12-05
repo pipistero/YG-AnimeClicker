@@ -44,7 +44,7 @@ namespace PS.LocalizationFeature.Assets
 
             foreach (string line in lines)
             {
-                string[] pair = line.Split(PairsSplitChar);
+                string[] pair = line.Replace("\r", string.Empty).Split(PairsSplitChar);
 
                 if (pair.Length != 2)
                     throw new Exception($"Problem with line in localization asset ({LanguageType});" +

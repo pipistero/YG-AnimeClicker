@@ -1,0 +1,10 @@
+ChapterText:Chapter
+ChapterName1:Start
+ChapterName2:Village
+ChapterName3:Anxiety
+ChapterName4:Future
+ChapterName5:Runaway
+ChapterName6:Dream
+ChapterName7:Challenge
+ChapterName8:Discovery
+ChapterName9:Peace

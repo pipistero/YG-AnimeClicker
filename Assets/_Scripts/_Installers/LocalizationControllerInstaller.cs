@@ -9,7 +9,7 @@ namespace _Installers
     public class LocalizationControllerInstaller : MonoInstaller
     {
         [SerializeField] private LanguageAsset[] _languageAssets;
-        
+
         public override void InstallBindings()
         {
             Container

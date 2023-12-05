@@ -88,7 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c73aaff62d2435bbc738a2b95ca045a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _languageAssets: []
+  _languageAssets:
+  - _asset: {fileID: 4900000, guid: 495225c417ab9ff4481b1b4f92c134ba, type: 3}
+    _languageType: 1
 --- !u!1 &2212596622728591569
 GameObject:
   m_ObjectHideFlags: 0

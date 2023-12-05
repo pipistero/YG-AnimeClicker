@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Numerics;
 using _Scripts._Enums.Upgrades;
+using _Scripts.Levels;
 using _Scripts.Upgrades;
 using UnityEngine.Assertions.Must;
 
@@ -12,8 +13,10 @@ namespace _Scripts.Clicker
         public event Action<BigInteger> PerSecondValueUpdated; 
         public event Action<BigInteger> PerClickValueUpdated;
 
-        public event Action<int> LevelUpdated; 
+        public event Action<int> LevelUpdated;
 
+        private LevelConfig _levelConfig;
+        
         private int _level;
         public int Level => _level;
 
@@ -21,13 +24,22 @@ namespace _Scripts.Clicker
         private Dictionary<PerClickUpgradeType, int> _perClickUpgradesMap;
 
         private readonly UpgradesStorage _upgradesStorage;
+        private readonly LevelStorage _levelStorage;
 
         private BigInteger _perSecondValue;
         private BigInteger _perClickValue;
+
+        public void SetLevel(int level)
+        {
+            _level = level;
+            
+            LevelUpdated?.Invoke(_level);
+        }
         
-        public ClickerData(UpgradesStorage upgradesStorage)
+        public ClickerData(UpgradesStorage upgradesStorage, LevelStorage levelStorage)
         {
             _upgradesStorage = upgradesStorage;
+            _levelStorage = levelStorage;
         }
 
         public void LoadData(
@@ -36,7 +48,8 @@ namespace _Scripts.Clicker
             Dictionary<PerClickUpgradeType, int> perClickUpgrades)
         {
             _level = level;
-
+            //_levelConfig = _levelStorage.GetConfig(_level);
+            
             _perSecondUpgradesMap = perSecondUpgrades;
             _perClickUpgradesMap = perClickUpgrades;
             

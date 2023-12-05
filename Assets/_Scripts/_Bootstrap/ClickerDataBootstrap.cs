@@ -13,12 +13,12 @@ namespace _Scripts._Bootstrap
         {
             var perSecondUpgrades = new Dictionary<PerSecondUpgradeType, int>()
             {
-                [PerSecondUpgradeType.FlowersGarden] = 2
+                //[PerSecondUpgradeType.FlowersGarden] = 2
             };
             
             var perClickUpgrades = new Dictionary<PerClickUpgradeType, int>()
             {
-                [PerClickUpgradeType.Flowers] = 1,
+                //[PerClickUpgradeType.Flowers] = 1,
             };
             
             clickerData.LoadData(1, perSecondUpgrades, perClickUpgrades);
