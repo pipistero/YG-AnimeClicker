@@ -13,7 +13,7 @@ namespace _Scripts.Upgrades
         [SerializeField] private PerClickUpgradeType _perClickUpgradeType;
 
         [Header("Icon")] 
-        [SerializeField] private Sprite _icon;
+        [SerializeField] private string _icon;
 
         [Header("Texts")] 
         [SerializeField] private string _name;
@@ -29,7 +29,7 @@ namespace _Scripts.Upgrades
         public PerSecondUpgradeType PerSecondUpgradeType => _perSecondUpgradeType;
         public PerClickUpgradeType PerClickUpgradeType => _perClickUpgradeType;
 
-        public Sprite Icon => _icon;
+        public string Icon => _icon;
 
         public string Name => _name;
         public string Description => _description;
