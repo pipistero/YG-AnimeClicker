@@ -1,32 +1,45 @@
 using System;
 using System.Numerics;
+using System.Threading.Tasks;
 using _Enums.Currencies;
+using _Scripts.Clicker.UI;
 using _Scripts.Currencies;
+using PS.ObjectPool.Controller;
 using PS.ResourcesFeature.Controller;
 using PS.TimerFeature.TimeInvoker;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Zenject;
+using Vector3 = UnityEngine.Vector3;
 
 namespace _Scripts.Clicker
 {
     public class ClickerView : MonoBehaviour
     {
         [Header("Buttons")] 
-        [SerializeField] private Button _button;
+        [SerializeField] private ClickerButton _button;
+
+        [Header("Click view holder")] 
+        [SerializeField] private Transform _clickViewHolder;
 
         private BigInteger _perClickValue;
         private BigInteger _perSecondValue;
 
         private ClickerData _clickerData;
         private ResourcesController<CurrencyType> _resourcesController;
-
+        private ObjectPoolController _objectPoolController;
+        
         [Inject]
-        public void Construct(ClickerData clickerData, ResourcesController<CurrencyType> resourcesController)
+        public void Construct(
+            ClickerData clickerData, 
+            ResourcesController<CurrencyType> resourcesController,
+            ObjectPoolController objectPoolController)
         {
             _clickerData = clickerData;
             _resourcesController = resourcesController;
+            _objectPoolController = objectPoolController;
         }
 
         private void Start()
@@ -42,9 +55,10 @@ namespace _Scripts.Clicker
             
         }
         
-        private void OnButtonClick()
+        private void OnButtonClick(PointerEventData eventData)
         {
-            //Animation etc.
+            PlayClickAnimation(_clickViewHolder.InverseTransformVector(eventData.pointerPressRaycast.worldPosition));
+            
             _resourcesController.AddAmount(CurrencyType.Gold, _perClickValue, this);            
         }
 
@@ -52,12 +66,22 @@ namespace _Scripts.Clicker
         {
             _resourcesController.AddAmount(CurrencyType.Gold, _perSecondValue, this);
         }
+
+        private async Task PlayClickAnimation(Vector3 position)
+        {
+            var clickView = _objectPoolController.CreateObject<ClickView>(_clickViewHolder);
+            clickView.transform.localPosition = position;
+            
+            await clickView.Play(_perClickValue);
+            
+            _objectPoolController.ReturnToPool(clickView);
+        }
         
         #region Events
 
         private void OnEnable()
         {
-            _button.onClick.AddListener(OnButtonClick);
+            _button.Clicked += OnButtonClick;
             
             _clickerData.PerSecondValueUpdated += OnPerSecondValueUpdated;
             _clickerData.PerClickValueUpdated += OnPerClickValueUpdated;
@@ -67,7 +91,7 @@ namespace _Scripts.Clicker
 
         private void OnDisable()
         {
-            _button.onClick.RemoveListener(OnButtonClick);
+            _button.Clicked -= OnButtonClick;
 
             _clickerData.PerSecondValueUpdated -= OnPerSecondValueUpdated;
             _clickerData.PerClickValueUpdated -= OnPerClickValueUpdated;

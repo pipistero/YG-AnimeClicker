@@ -247,6 +247,7 @@ MonoBehaviour:
   - {fileID: 2208869772945398269}
   - {fileID: 4540441832047352238}
   - {fileID: 2360413977448248451}
+  - {fileID: 1544267166048443923}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -356,6 +357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectPoolFactory: {fileID: 0}
   _objectsHolder: {fileID: 0}
+  _clickViewPrefab: {fileID: 5054201894919978586, guid: 81be644bf6576e443a910d7e913efe54, type: 3}
 --- !u!1 &7217916378320871746
 GameObject:
   m_ObjectHideFlags: 0
