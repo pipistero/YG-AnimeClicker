@@ -13,7 +13,7 @@ namespace _Scripts._Bootstrap
         {
             var perSecondUpgrades = new Dictionary<PerSecondUpgradeType, int>()
             {
-                [PerSecondUpgradeType.FlowersGarden] = 1
+                [PerSecondUpgradeType.FlowersGarden] = 10
             };
             
             var perClickUpgrades = new Dictionary<PerClickUpgradeType, int>()

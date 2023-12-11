@@ -26,7 +26,7 @@ namespace _Scripts.Clicker.UI
 
         public async Task Play(BigInteger value)
         {
-            _value.text = $"+{value.GetShortString()}";
+            _value.text = $"+{value.ToShortString()}";
 
             await StartAnimation();
         }

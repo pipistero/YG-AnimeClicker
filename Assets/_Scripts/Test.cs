@@ -33,6 +33,5 @@ public class Test : MonoBehaviour
             _clickerData.SetLevel(3);
         if (Input.GetKeyDown(KeyCode.Alpha4))
             _clickerData.SetLevel(4);
-
     }
 }

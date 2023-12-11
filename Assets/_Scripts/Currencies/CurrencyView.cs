@@ -1,6 +1,7 @@
 using System;
 using System.Numerics;
 using _Enums.Currencies;
+using _Scripts.Extensions;
 using PS.ResourcesFeature.Controller;
 using PS.SpritesFeature.Controller;
 using TMPro;
@@ -48,7 +49,7 @@ namespace _Scripts.Currencies
 
         private void UpdateValue(BigInteger oldValue, BigInteger newValue)
         {
-            _value.text = newValue.ToString();
+            _value.text = newValue.ToShortString();
         }
 
         #region Events work
