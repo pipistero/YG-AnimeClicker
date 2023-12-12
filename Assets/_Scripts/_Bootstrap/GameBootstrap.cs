@@ -1,6 +1,9 @@
 using System;
 using _Enums.Panels;
 using _Scripts._Panels;
+using _Scripts.Shop.Item;
+using _Scripts.Upgrades;
+using PS.ObjectPool.Controller;
 using PS.PanelsFeature.Controller;
 using TMPro;
 using UnityEngine;
@@ -10,11 +13,18 @@ namespace _Scripts._Bootstrap
 {
     public class GameBootstrap : MonoBehaviour
     {
-        [SerializeField] private LoadingView _loadingView;
+        private ObjectPoolController _objectPoolController;
+        private UpgradesStorage _upgradesStorage;
 
-        private void Start()
+        [Inject]
+        private void Construct(ObjectPoolController objectPoolController, UpgradesStorage upgradesStorage)
         {
-            _loadingView.Open();
+            _objectPoolController = objectPoolController;
+            _upgradesStorage = upgradesStorage;
+        }
+        
+        private void Awake()
+        {
         }
     }
 }

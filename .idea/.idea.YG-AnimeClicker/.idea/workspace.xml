@@ -3,14 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="7d034857-f758-4716-b7ad-a38e9a790f20" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.YG-AnimeClicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.YG-AnimeClicker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Images/UI/image 84.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Images/UI/image 84.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Click/ClickView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Click/ClickView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LanguageAssets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LanguageAssets/Language_EN.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LanguageAssets/Language_EN.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Configs/Upgrades/Flowers.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Configs/Upgrades/Flowers.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Configs/Upgrades/FlowersGarden.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Configs/Upgrades/FlowersGarden.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/Colus-Currency.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Fonts/Colus-Currency.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/Colus-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Fonts/Colus-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/NotoSerif-Currency.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/NotoSerif-Currency.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/NotoSerif-Default.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/NotoSerif-Default.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/NotoSerif-VariableFont_wdth,wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/NotoSerif-VariableFont_wdth,wght.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/SceneContexts/MainSceneContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/SceneContexts/MainSceneContext.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Clicker/UI/ClickView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Clicker/UI/ClickView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Currencies/CurrencyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Currencies/CurrencyView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Clicker/ClickerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Clicker/ClickerData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/_Bootstrap/ClickerDataBootstrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/_Bootstrap/ClickerDataBootstrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Upgrades/UpgradeConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Upgrades/UpgradeConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Upgrades/UpgradesStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Upgrades/UpgradesStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/_Bootstrap/GameBootstrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/_Bootstrap/GameBootstrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/_Installers/ObjectPoolControllerInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/_Installers/ObjectPoolControllerInstaller.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +36,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/ButtonEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/PointerEventData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/SpriteState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9d211078424f4d9688f197836e3e28b67400/5f/4858e1ba/Input.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c399efc08928422d8828d74a2b19ffba158600/55/1ca68a84/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f5b293c74049457cabc28437c5a763925a00/02/5eb913ad/PreserveAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f5b293c74049457cabc28437c5a763925a00/13/e39260af/InjectSources.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f5b293c74049457cabc28437c5a763925a00/59/0ebce15f/InjectAttribute.cs" root0="SKIP_HIGHLIGHTING" />
@@ -87,10 +106,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3088">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="9332">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="3088" />
+      <option name="pid" value="9332" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -114,7 +133,8 @@
       <workItem from="1701778347139" duration="6355000" />
       <workItem from="1701969775839" duration="4106000" />
       <workItem from="1702049740796" duration="716000" />
-      <workItem from="1702329555490" duration="2108000" />
+      <workItem from="1702329555490" duration="2920000" />
+      <workItem from="1702346250699" duration="8312000" />
     </task>
     <servers />
   </component>

@@ -60,32 +60,48 @@ namespace _Scripts.Clicker
             CalculatePerClickValue();
         }
 
-        public void AddPerSecondUpgrade(PerSecondUpgradeType upgradeClass)
+        public void AddPerSecondUpgrade(PerSecondUpgradeType type)
         {
-            if (_perSecondUpgradesMap.ContainsKey(upgradeClass))
-                _perSecondUpgradesMap[upgradeClass]++;
+            if (_perSecondUpgradesMap.ContainsKey(type))
+                _perSecondUpgradesMap[type]++;
             else
-                _perSecondUpgradesMap.Add(upgradeClass, 1);
+                _perSecondUpgradesMap.Add(type, 1);
 
-            var config = _upgradesStorage.GetPerSecondUpgrade(upgradeClass);
+            var config = _upgradesStorage.GetPerSecondUpgrade(type);
 
-            _perSecondValue += new BigInteger(config.Value);
+            _perSecondValue += config.Value;
             
             PerSecondValueUpdated?.Invoke(_perSecondValue);
         }
         
-        public void AddPerClickUpgrade(PerClickUpgradeType upgradeClass)
+        public void AddPerClickUpgrade(PerClickUpgradeType type)
         {
-            if (_perClickUpgradesMap.ContainsKey(upgradeClass))
-                _perClickUpgradesMap[upgradeClass]++;
+            if (_perClickUpgradesMap.ContainsKey(type))
+                _perClickUpgradesMap[type]++;
             else
-                _perClickUpgradesMap.Add(upgradeClass, 1);
+                _perClickUpgradesMap.Add(type, 1);
             
-            var config = _upgradesStorage.GetPerClickUpgrade(upgradeClass);
+            var config = _upgradesStorage.GetPerClickUpgrade(type);
 
-            _perClickValue += new BigInteger(config.Value);
+            _perClickValue += config.Value;
             
             PerClickValueUpdated?.Invoke(_perClickValue);
+        }
+
+        public int GetPerSecondUpgradeLevel(PerSecondUpgradeType type)
+        {
+            if (_perSecondUpgradesMap.ContainsKey(type))
+                return _perSecondUpgradesMap[type];
+
+            return 0;
+        }
+
+        public int GetPerClickUpgradeLevel(PerClickUpgradeType type)
+        {
+            if (_perClickUpgradesMap.ContainsKey(type))
+                return _perClickUpgradesMap[type];
+
+            return 0;
         }
 
         private void CalculatePerSecondValue()
@@ -96,7 +112,7 @@ namespace _Scripts.Clicker
             {
                 var upgradeConfig = _upgradesStorage.GetPerSecondUpgrade(upgrade.Key);
 
-                _perSecondValue += new BigInteger(upgradeConfig.Value) * upgrade.Value;
+                _perSecondValue += upgradeConfig.Value * upgrade.Value;
             }
             
             PerSecondValueUpdated?.Invoke(_perSecondValue);
@@ -110,7 +126,7 @@ namespace _Scripts.Clicker
             {
                 var upgradeConfig = _upgradesStorage.GetPerClickUpgrade(upgrade.Key);
 
-                _perClickValue += new BigInteger(upgradeConfig.Value) * upgrade.Value;
+                _perClickValue += upgradeConfig.Value * upgrade.Value;
             }
             
             PerClickValueUpdated?.Invoke(_perClickValue);

@@ -358,6 +358,7 @@ MonoBehaviour:
   _objectPoolFactory: {fileID: 0}
   _objectsHolder: {fileID: 0}
   _clickViewPrefab: {fileID: 5054201894919978586, guid: 81be644bf6576e443a910d7e913efe54, type: 3}
+  _shopItemViewPrefab: {fileID: 7224174198938174766, guid: c4a6d01cf3562aa4fa886085942ce188, type: 3}
 --- !u!1 &7217916378320871746
 GameObject:
   m_ObjectHideFlags: 0

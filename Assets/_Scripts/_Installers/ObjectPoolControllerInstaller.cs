@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using _Scripts.Clicker.UI;
+using _Scripts.Shop.Item;
 using PS.ObjectPool.Controller;
 using PS.ObjectPool.Factory;
 using PS.ObjectPool.Interfaces;
@@ -18,6 +19,7 @@ namespace _Installers
 
         [Header("Prefabs")] 
         [SerializeField] private ClickView _clickViewPrefab;
+        [SerializeField] private ShopItemView _shopItemViewPrefab;
 
         public override void InstallBindings()
         {
@@ -32,6 +34,7 @@ namespace _Installers
             var result = new List<IPoolObject>();
 
             result.Add(_clickViewPrefab);
+            result.Add(_shopItemViewPrefab);
             
             return result;
         }

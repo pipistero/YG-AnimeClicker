@@ -1,25 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using _Enums.Panels;
+using _Scripts._Enums.Upgrades;
 using _Scripts.Clicker;
+using _Scripts.Shop.Item;
+using _Scripts.Shop.Panel;
+using _Scripts.Upgrades;
 using PS.PanelsFeature.Controller;
 using UnityEngine;
 using Zenject;
 
 public class Test : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     private ClickerData _clickerData;
+    private UpgradesStorage _upgradesStorage;
 
     [Inject]
-    public void Construct(ClickerData clickerData)
+    public void Construct(ClickerData clickerData, UpgradesStorage upgradesStorage)
     {
         _clickerData = clickerData;
+        _upgradesStorage = upgradesStorage;
     }
     
     // Update is called once per frame

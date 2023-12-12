@@ -8,3 +8,8 @@ ChapterName6:Dream
 ChapterName7:Challenge
 ChapterName8:Discovery
 ChapterName9:Peace
+Lvl:Lvl
+PerClickUpgradeDescription:Per click
+PerSecondUpgradeDescription:Per second
+FlowersUpgradeName:Flowers
+FlowersGardenUpgradeName:Flowers Garden

@@ -21,6 +21,16 @@ namespace _Scripts.Upgrades
             _perClickUpgradesMap = _perClickUpgrades.ToDictionary(u => u.PerClickUpgradeType);
         }
 
+        public List<UpgradeConfig> GetAllUpgrades()
+        {
+            var result = new List<UpgradeConfig>();
+            
+            result.AddRange(_perSecondUpgrades);
+            result.AddRange(_perClickUpgrades);
+
+            return result.OrderBy(u => u.Id).ToList();
+        }
+
         public List<PerSecondUpgradeConfig> GetPerSecondUpgrades()
         {
             return _perSecondUpgrades;
