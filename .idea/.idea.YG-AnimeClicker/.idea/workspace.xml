@@ -3,28 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="7d034857-f758-4716-b7ad-a38e9a790f20" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.YG-AnimeClicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.YG-AnimeClicker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LanguageAssets.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LanguageAssets/Language_EN.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LanguageAssets/Language_EN.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Configs/Upgrades/Flowers.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Configs/Upgrades/Flowers.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Configs/Upgrades/FlowersGarden.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Configs/Upgrades/FlowersGarden.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/Colus-Currency.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Fonts/Colus-Currency.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Fonts/Colus-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Fonts/Colus-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/NotoSerif-Currency.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/NotoSerif-Currency.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/NotoSerif-Default.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/NotoSerif-Default.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/NotoSerif-VariableFont_wdth,wght.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/NotoSerif-VariableFont_wdth,wght.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/SceneContexts/MainSceneContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/SceneContexts/MainSceneContext.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Localization/Language_EN.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Localization/Language_EN.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Shop/ShopItemView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Shop/ShopItemView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Shop/ShopView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Shop/ShopView.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Clicker/ClickerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Clicker/ClickerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Upgrades/UpgradeConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Upgrades/UpgradeConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Upgrades/UpgradesStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Upgrades/UpgradesStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/_Bootstrap/GameBootstrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/_Bootstrap/GameBootstrap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/_Installers/ObjectPoolControllerInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/_Installers/ObjectPoolControllerInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Extensions/BigIntegerExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Extensions/BigIntegerExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Shop/Item/ShopItemView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Shop/Item/ShopItemView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,10 +93,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="9332">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="9332" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -134,7 +121,9 @@
       <workItem from="1701969775839" duration="4106000" />
       <workItem from="1702049740796" duration="716000" />
       <workItem from="1702329555490" duration="2920000" />
-      <workItem from="1702346250699" duration="8312000" />
+      <workItem from="1702346250699" duration="9112000" />
+      <workItem from="1702408156708" duration="782000" />
+      <workItem from="1702498909534" duration="1703000" />
     </task>
     <servers />
   </component>

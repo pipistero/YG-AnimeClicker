@@ -23,16 +23,16 @@ namespace _Scripts.Extensions
         public static string ToShortString(this BigInteger value)
         {
             if (value / Q > 0)
-                return $"{value / Q}Q";
+                return $"{value / Q}.{(value % Q) / QDot}Q";
 
             if (value / T > 0)
-                return $"{value / T}T";
+                return $"{value / T}.{(value % T) / TDot}T";
 
             if (value / B > 0)
-                return $"{value / B}B";
+                return $"{value / B}.{(value % B) / BDot}B";
 
             if (value / M > 0)
-                return $"{value / M}M";
+                return $"{value / M}.{(value % M) / MDot}M";
 
             if (value / K > 0)
                 return $"{value / K}.{(value % K) / KDot}K";

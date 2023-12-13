@@ -371,7 +371,7 @@ MonoBehaviour:
   _rectTransform: {fileID: 975419789297158614}
   _closedXPosition: 285.8
   _openedXPosition: -310
-  _animationDuration: 1.2
+  _animationDuration: 1
   _ease: 15
   _title: {fileID: 975419788127356480}
   _views:

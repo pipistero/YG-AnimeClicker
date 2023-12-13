@@ -19,6 +19,9 @@ namespace _Scripts.Shop.Item
 {
     public class ShopItemView : MonoBehaviour, IPoolObject
     {
+        [Header("States")] 
+        [SerializeField] private ShopItemViewStatesHandler _statesHandler;
+        
         [Header("Texts")] 
         [SerializeField] private TextMeshProUGUI _name;
         [SerializeField] private TextMeshProUGUI _description;
@@ -40,6 +43,7 @@ namespace _Scripts.Shop.Item
         private ClickerData _clickerData;
 
         private UpgradeConfig _upgradeConfig;
+        private UpgradeType _upgradeType;
         private PerClickUpgradeType _perClickUpgradeType;
         private PerSecondUpgradeType _perSecondUpgradeType;
 
@@ -55,9 +59,24 @@ namespace _Scripts.Shop.Item
             _localizationController = localizationController;
             _clickerData = clickerData;
         }
+
+        private void Awake()
+        {
+            _buyButton.AddListener(() => OnBuyButtonClicked());
+        }
+
+        private void OnBuyButtonClicked()
+        {
+            if (_upgradeType == UpgradeType.PerSecond)
+                _clickerData.AddPerSecondUpgrade(_perSecondUpgradeType);
+            else
+                _clickerData.AddPerClickUpgrade(_perClickUpgradeType);
+        }
+
         public void Initialize(UpgradeConfig upgradeConfig)
         {
             _upgradeConfig = upgradeConfig;
+            _upgradeType = _upgradeConfig.UpgradeType;
 
             if (_upgradeConfig.UpgradeType == UpgradeType.PerClick)
                 _perClickUpgradeType = (_upgradeConfig as PerClickUpgradeConfig).PerClickUpgradeType; 
@@ -77,6 +96,7 @@ namespace _Scripts.Shop.Item
             UpdateLevelText();
             UpdateDescription();
             UpdateBuyButton();
+            UpdateState();
         }
 
         private void UpdateLevelText()
@@ -133,21 +153,46 @@ namespace _Scripts.Shop.Item
             _description.text = description;
         }
 
+        private void UpdateState()
+        {
+            _statesHandler.SetState(_upgradeConfig.Level <= _clickerData.Level, _upgradeConfig.Level);
+        }
+
         private void OnResourceBigIntegerUpdated(CurrencyType type, BigInteger oldValue, BigInteger newValue, object sender)
         {
             UpdateBuyButton();
         }
-        
+
+        private void OnLevelUpdated(int level)
+        {
+            UpdateState();
+        }
+
+        private void OnUpgradeAdded(UpgradeConfig config, int level)
+        {
+            if (config != _upgradeConfig)
+                return;
+            
+            _levelGameObject.SetActive(true);
+            _level.text = level.ToString();
+        }
+
         #region Events work
 
         private void OnEnable()
         {
             _resourcesController.ResourceBigIntegerUpdated += OnResourceBigIntegerUpdated;
+            
+            _clickerData.LevelUpdated += OnLevelUpdated;
+            _clickerData.UpgradeAdded += OnUpgradeAdded;
         }
 
         private void OnDisable()
         {
             _resourcesController.ResourceBigIntegerUpdated -= OnResourceBigIntegerUpdated;
+            
+            _clickerData.LevelUpdated -= OnLevelUpdated;
+            _clickerData.UpgradeAdded -= OnUpgradeAdded;
         }
 
         #endregion

@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Numerics;
+using _Enums.Currencies;
 using _Scripts._Enums.Upgrades;
 using _Scripts.Levels;
 using _Scripts.Upgrades;
-using UnityEngine.Assertions.Must;
+using PS.ResourcesFeature.Controller;
 
 namespace _Scripts.Clicker
 {
@@ -14,6 +15,8 @@ namespace _Scripts.Clicker
         public event Action<BigInteger> PerClickValueUpdated;
 
         public event Action<int> LevelUpdated;
+
+        public event Action<UpgradeConfig, int> UpgradeAdded; 
 
         private LevelConfig _levelConfig;
         
@@ -25,10 +28,11 @@ namespace _Scripts.Clicker
 
         private readonly UpgradesStorage _upgradesStorage;
         private readonly LevelStorage _levelStorage;
+        private readonly ResourcesController<CurrencyType> _resourcesController;
 
         private BigInteger _perSecondValue;
         public BigInteger PerSecondValue => _perSecondValue;
-        
+
         private BigInteger _perClickValue;
         public BigInteger PerClickValue => _perClickValue;
         
@@ -39,10 +43,14 @@ namespace _Scripts.Clicker
             LevelUpdated?.Invoke(_level);
         }
         
-        public ClickerData(UpgradesStorage upgradesStorage, LevelStorage levelStorage)
+        public ClickerData(
+            UpgradesStorage upgradesStorage, 
+            LevelStorage levelStorage, 
+            ResourcesController<CurrencyType> resourcesController)
         {
             _upgradesStorage = upgradesStorage;
             _levelStorage = levelStorage;
+            _resourcesController = resourcesController;
         }
 
         public void LoadData(
@@ -69,9 +77,12 @@ namespace _Scripts.Clicker
 
             var config = _upgradesStorage.GetPerSecondUpgrade(type);
 
+            _resourcesController.SpendAmount(CurrencyType.Gold, config.Price, this);
+            
             _perSecondValue += config.Value;
             
             PerSecondValueUpdated?.Invoke(_perSecondValue);
+            UpgradeAdded?.Invoke(config, _perSecondUpgradesMap[type]);
         }
         
         public void AddPerClickUpgrade(PerClickUpgradeType type)
@@ -83,9 +94,12 @@ namespace _Scripts.Clicker
             
             var config = _upgradesStorage.GetPerClickUpgrade(type);
 
+            _resourcesController.SpendAmount(CurrencyType.Gold, config.Price, this);
+            
             _perClickValue += config.Value;
             
             PerClickValueUpdated?.Invoke(_perClickValue);
+            UpgradeAdded?.Invoke(config, _perClickUpgradesMap[type]);
         }
 
         public int GetPerSecondUpgradeLevel(PerSecondUpgradeType type)
@@ -120,7 +134,7 @@ namespace _Scripts.Clicker
 
         private void CalculatePerClickValue()
         {
-            _perClickValue = new BigInteger(0);
+            _perClickValue = BigInteger.One;
             
             foreach (var upgrade in _perClickUpgradesMap)
             {
