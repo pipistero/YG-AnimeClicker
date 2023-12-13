@@ -3,15 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7d034857-f758-4716-b7ad-a38e9a790f20" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.YG-AnimeClicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.YG-AnimeClicker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Configs/Upgrades/FlowersGarden.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Configs/Upgrades/FlowersGarden.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/Colus-Currency.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Fonts/Colus-Currency.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Fonts/Colus-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Fonts/Colus-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Localization/Language_EN.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Localization/Language_EN.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Shop/ShopItemView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Shop/ShopItemView.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Shop/ShopView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Shop/ShopView.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Clicker/ClickerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Clicker/ClickerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Extensions/BigIntegerExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Extensions/BigIntegerExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Shop/Item/ShopItemView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Shop/Item/ShopItemView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Shop/Panel/ShopView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Shop/Panel/ShopView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +120,7 @@
       <workItem from="1702329555490" duration="2920000" />
       <workItem from="1702346250699" duration="9112000" />
       <workItem from="1702408156708" duration="782000" />
-      <workItem from="1702498909534" duration="1703000" />
+      <workItem from="1702498909534" duration="2935000" />
     </task>
     <servers />
   </component>

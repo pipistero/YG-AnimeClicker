@@ -14,14 +14,13 @@ using Zenject;
 
 namespace _Scripts.Shop.Panel
 {
+    //TODO: title localization
+    //TODO: check bugs with level change
+    //TODO: add notification on unlocked shop items
     public class ShopView : MonoBehaviour
     {
         [Header("Animation")] 
-        [SerializeField] private RectTransform _rectTransform;
-        [SerializeField] private float _closedXPosition;
-        [SerializeField] private float _openedXPosition;
-        [SerializeField] private float _animationDuration;
-        [SerializeField] private Ease _ease;
+        [SerializeField] private ShopViewAnimationHandler _animationHandler;
 
         [Header("Texts")] 
         [SerializeField] private TextMeshProUGUI _title;
@@ -52,7 +51,7 @@ namespace _Scripts.Shop.Panel
             _button.onClick.AddListener((() =>
             {
                 OnButtonClicked();
-            }));    
+            }));
         }
 
         private async Task OnButtonClicked()
@@ -61,12 +60,8 @@ namespace _Scripts.Shop.Panel
 
             _state = !_state;
             _shopButton.SetState(_state);
-
-            _rectTransform
-                .DOAnchorPosX(_state ? _openedXPosition : _closedXPosition, _animationDuration)
-                .SetEase(_ease);
-
-            await Task.Delay(TimeSpan.FromSeconds(_animationDuration));
+            
+            await _animationHandler.SetState(_state);
             
             _button.interactable = true;
         }

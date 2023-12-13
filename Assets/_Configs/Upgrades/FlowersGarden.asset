@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5154314c1f0846e4a916270d89b8c76c, type: 3}
   m_Name: FlowersGarden
   m_EditorClassIdentifier: 
-  _id: 0
+  _id: 2
   _icon: FlowersGardenIcon
   _name: FlowersGardenUpgradeName
   _value: 15
