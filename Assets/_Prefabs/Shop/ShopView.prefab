@@ -1,5 +1,81 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &57903667013087874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4049012553355989632}
+  - component: {fileID: 1799731483027180096}
+  - component: {fileID: 2826212589731859093}
+  m_Layer: 5
+  m_Name: Notification
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4049012553355989632
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57903667013087874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 975419789630333562}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -8.5, y: 68.5}
+  m_SizeDelta: {x: 32, y: 32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1799731483027180096
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57903667013087874}
+  m_CullTransparentMesh: 1
+--- !u!114 &2826212589731859093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57903667013087874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.30980393, b: 0.30980393, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &975419788127356510
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,17 +446,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationHandler: {fileID: 5386857351849375026}
-  _rectTransform: {fileID: 975419789297158614}
-  _closedXPosition: 285.8
-  _openedXPosition: -310
-  _animationDuration: 1
-  _ease: 15
   _title: {fileID: 975419788127356480}
   _views:
   - {fileID: 7622358904834995845}
   - {fileID: 7622358904260589637}
-  _button: {fileID: 975419789630333565}
-  _shopButton: {fileID: 975419789445032456}
+  _shopButton: {fileID: 429634212275712530}
 --- !u!1 &975419789445032452
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +462,6 @@ GameObject:
   - component: {fileID: 975419789445032455}
   - component: {fileID: 975419789445032457}
   - component: {fileID: 975419789445032454}
-  - component: {fileID: 975419789445032456}
   m_Layer: 5
   m_Name: Arrow
   m_TagString: Untagged
@@ -458,19 +527,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &975419789445032456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 975419789445032452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38019882d53b4daf8fd7a1e194807672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _arrow: {fileID: 975419789445032452}
 --- !u!1 &975419789630333563
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +538,8 @@ GameObject:
   - component: {fileID: 975419789630333562}
   - component: {fileID: 975419789630333567}
   - component: {fileID: 975419789630333564}
-  - component: {fileID: 975419789630333565}
+  - component: {fileID: 5066889425392253508}
+  - component: {fileID: 429634212275712530}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -503,6 +560,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 975419789445032455}
+  - {fileID: 4049012553355989632}
   m_Father: {fileID: 975419789297158614}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -549,7 +607,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &975419789630333565
+--- !u!114 &5066889425392253508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -558,7 +616,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 975419789630333563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b78c6f677aa14150bf7779f2a4aa9524, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -593,6 +651,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &429634212275712530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975419789630333563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38019882d53b4daf8fd7a1e194807672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 5066889425392253508}
+  _arrow: {fileID: 975419789445032452}
+  _notification: {fileID: 57903667013087874}
 --- !u!1 &4530471645980182484
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,10 +792,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rectTransform: {fileID: 975419789297158614}
-  _closedXPosition: 285.8
   _openedXPosition: -310
-  _animationDuration: 1
-  _ease: 15
+  _openAnimationDuration: 1
+  _openAnimationEase: 15
+  _closedXPosition: 285.8
+  _closeAnimationDuration: 1
+  _closeAnimationEase: 14
 --- !u!1 &5736353742952102689
 GameObject:
   m_ObjectHideFlags: 0

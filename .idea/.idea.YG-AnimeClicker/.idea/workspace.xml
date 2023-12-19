@@ -3,12 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="7d034857-f758-4716-b7ad-a38e9a790f20" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.YG-AnimeClicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.YG-AnimeClicker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Fonts/Colus-Currency.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Fonts/Colus-Currency.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Fonts/Colus-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Fonts/Colus-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Shop/ShopItemView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Shop/ShopItemView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Localization/Language_EN.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Localization/Language_EN.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Shop/ShopView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Shop/ShopView.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Clicker/ClickerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Clicker/ClickerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Shop/Item/ShopItemView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Shop/Item/ShopItemView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Shop/Panel/ShopButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Shop/Panel/ShopButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Shop/Panel/ShopView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Shop/Panel/ShopView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Shop/Panel/ShopViewAnimationHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Shop/Panel/ShopViewAnimationHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,10 +93,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="9688">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="9688" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -120,7 +123,9 @@
       <workItem from="1702329555490" duration="2920000" />
       <workItem from="1702346250699" duration="9112000" />
       <workItem from="1702408156708" duration="782000" />
-      <workItem from="1702498909534" duration="2935000" />
+      <workItem from="1702498909534" duration="3446000" />
+      <workItem from="1702937571878" duration="595000" />
+      <workItem from="1703008594712" duration="3686000" />
     </task>
     <servers />
   </component>
@@ -131,5 +136,24 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/LevelTransition/LevelTransitionView.cs</url>
+          <line>30</line>
+          <properties documentPath="C:\Job\YandexGames\YG-AnimeClicker\Assets\_Scripts\LevelTransition\LevelTransitionView.cs" initialLine="30" containingFunctionPresentation="method 'OnLevelUpdated'">
+            <startOffsets>
+              <option value="781" />
+            </startOffsets>
+            <endOffsets>
+              <option value="821" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -6,6 +6,7 @@ using _Scripts.Clicker.UI;
 using _Scripts.Currencies;
 using PS.ObjectPool.Controller;
 using PS.ResourcesFeature.Controller;
+using PS.SpritesFeature.Controller;
 using PS.TimerFeature.TimeInvoker;
 using TMPro;
 using UnityEngine;
@@ -21,6 +22,9 @@ namespace _Scripts.Clicker
         [Header("Buttons")] 
         [SerializeField] private ClickerButton _button;
 
+        [Header("Images")] 
+        [SerializeField] private Image _background;
+        
         [Header("Click view holder")] 
         [SerializeField] private Transform _clickViewHolder;
 
@@ -30,16 +34,19 @@ namespace _Scripts.Clicker
         private ClickerData _clickerData;
         private ResourcesController<CurrencyType> _resourcesController;
         private ObjectPoolController _objectPoolController;
+        private SpritesStorage _spritesStorage;
         
         [Inject]
         public void Construct(
             ClickerData clickerData, 
             ResourcesController<CurrencyType> resourcesController,
-            ObjectPoolController objectPoolController)
+            ObjectPoolController objectPoolController,
+            SpritesStorage spritesStorage)
         {
             _clickerData = clickerData;
             _resourcesController = resourcesController;
             _objectPoolController = objectPoolController;
+            _spritesStorage = spritesStorage;
         }
 
         private void Start()
@@ -52,7 +59,14 @@ namespace _Scripts.Clicker
 
         public void UpdateView()
         {
+            _background.sprite = _spritesStorage.GetSprite($"Level{_clickerData.Level}Background");
+        }
+        
+        private async void OnLevelUpdated(int level)
+        {
+            await Task.Delay(1000);
             
+            UpdateView();
         }
         
         private void OnButtonClick(PointerEventData eventData)
@@ -85,6 +99,7 @@ namespace _Scripts.Clicker
             
             _clickerData.PerSecondValueUpdated += OnPerSecondValueUpdated;
             _clickerData.PerClickValueUpdated += OnPerClickValueUpdated;
+            _clickerData.LevelUpdated += OnLevelUpdated;
 
             TimeInvoker.Instance.SecondTickedUnscaled += OnSecondTicked;
         }
@@ -95,6 +110,7 @@ namespace _Scripts.Clicker
 
             _clickerData.PerSecondValueUpdated -= OnPerSecondValueUpdated;
             _clickerData.PerClickValueUpdated -= OnPerClickValueUpdated;
+            _clickerData.LevelUpdated -= OnLevelUpdated;
             
             TimeInvoker.Instance.SecondTickedUnscaled -= OnSecondTicked;
         }

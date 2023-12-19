@@ -1,22 +1,16 @@
-using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using _Scripts.Shop.Item;
 using _Scripts.Upgrades;
-using DG.Tweening;
 using PS.LocalizationFeature.Controller;
-using PS.ObjectPool.Controller;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 using Zenject;
 
 namespace _Scripts.Shop.Panel
 {
-    //TODO: title localization
     //TODO: check bugs with level change
     //TODO: add notification on unlocked shop items
+    //TODO: add scroll
     public class ShopView : MonoBehaviour
     {
         [Header("Animation")] 
@@ -28,8 +22,7 @@ namespace _Scripts.Shop.Panel
         [Header("Items")]
         [SerializeField] private ShopItemView[] _views;
 
-        [Header("Buttons")] 
-        [SerializeField] private Button _button;
+        [Header("Buttons")]
         [SerializeField] private ShopButton _shopButton;
         
         private UpgradesStorage _upgradesStorage;
@@ -46,31 +39,37 @@ namespace _Scripts.Shop.Panel
             _localizationController = localizationController;
         }
 
-        private void OnEnable()
-        {
-            _button.onClick.AddListener((() =>
-            {
-                OnButtonClicked();
-            }));
-        }
-
         private async Task OnButtonClicked()
         {
-            _button.interactable = false;
+            _shopButton.Interactable = false;
 
             _state = !_state;
+            
             _shopButton.SetState(_state);
+            _shopButton.SetNotificationState(false);
             
             await _animationHandler.SetState(_state);
             
-            _button.interactable = true;
+            _shopButton.Interactable = true;
         }
 
         private void Start()
         {
             _shopButton.SetState(_state);
+            _shopButton.SetNotificationState(false);
+            
+            _shopButton.Clicked += () =>
+            {
+                OnButtonClicked();
+            };
             
             InitializeViews();
+            InitializeLocalization();
+        }
+
+        private void InitializeLocalization()
+        {
+            _title.text = _localizationController.Get("ShopTitle");
         }
 
         private void InitializeViews()

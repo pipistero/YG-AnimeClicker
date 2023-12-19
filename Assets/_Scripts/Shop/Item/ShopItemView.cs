@@ -62,7 +62,7 @@ namespace _Scripts.Shop.Item
 
         private void Awake()
         {
-            _buyButton.AddListener(() => OnBuyButtonClicked());
+            _buyButton.AddListener(OnBuyButtonClicked);
         }
 
         private void OnBuyButtonClicked()

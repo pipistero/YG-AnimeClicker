@@ -450,7 +450,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currencies:
   - {fileID: 21300000, guid: 903aafca1c6afcf4e9c8dbb1c96be364, type: 3}
-  _backgrounds: []
+  _backgrounds:
+  - {fileID: 21300000, guid: ad0168987daf4df409148c0a9c41e585, type: 3}
+  - {fileID: 21300000, guid: 3e5ca4a35d0e2744699317775711c060, type: 3}
+  - {fileID: 21300000, guid: 572668525349fc845b75976d9dc5e083, type: 3}
+  - {fileID: 21300000, guid: 6405a63d8c05f4747b0ea48f25df0b65, type: 3}
 --- !u!1 &8877249230953681249
 GameObject:
   m_ObjectHideFlags: 0
